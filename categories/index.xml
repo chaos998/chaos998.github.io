@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Hello Programmer</title>
-    <link>http://example.org/categories/</link>
+    <link>https://chaos998.github.io/categories/</link>
     <description>Recent content in Categories on Hello Programmer</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko-KR</language><atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>ko-KR</language><atom:link href="https://chaos998.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
