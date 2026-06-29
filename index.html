@@ -21,13 +21,19 @@
       <span class="brand-mark">SM</span>
       <span>이수민</span>
     </a>
-    <nav class="site-nav" aria-label="주요 섹션">
-      <a href="#impact">Impact</a>
-      <a href="#work">Work</a>
-      <a href="#stack">Stack</a>
-      <a href="#timeline">Career</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="header-actions">
+      <nav class="site-nav" aria-label="주요 섹션">
+        <a href="#impact">Impact</a>
+        <a href="#work">Work</a>
+        <a href="#cases">Cases</a>
+        <a href="#archive">Archive</a>
+        <a href="#method">Method</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="다크 모드 전환">
+        <i data-lucide="moon"></i>
+      </button>
+    </div>
   </header>
 
   <main id="top">
@@ -49,10 +55,29 @@
             <i data-lucide="layers-3"></i>
             대표 성과 보기
           </a>
+          <a class="ghost-action" href="#cases">
+            <i data-lucide="file-search"></i>
+            상세 케이스 보기
+          </a>
           <a class="ghost-action" href="#contact">
             <i data-lucide="send"></i>
             연락하기
           </a>
+        </div>
+        <div class="terminal-panel" aria-label="Engineering console summary">
+          <div class="terminal-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>architect@production</strong>
+          </div>
+          <div class="terminal-lines">
+            <p><span>$</span> trace bottleneck --db r5.4xlarge --agent --sp</p>
+            <p><span>✓</span> cpu reduced &gt; 50% · cost reduced ~ 40%</p>
+            <p><span>$</span> modernize legacy --vb6 --gateway --streaming</p>
+            <p><span>✓</span> DB boundary isolated · service path stabilized</p>
+            <p><span>$</span> ship cloud workflow --observability --ai-assisted</p>
+          </div>
         </div>
       </div>
       <figure class="hero-portrait reveal">
@@ -117,6 +142,11 @@
           <h3>실행이 남는 리더십</h3>
           <p>개발 리딩, 코드 리뷰, Scrum 운영, OKR 시스템 구축을 통해 일이 보이고 이어지는 개발 문화를 만드는 데 집중했습니다.</p>
         </article>
+        <article class="impact-card accent-violet reveal">
+          <i data-lucide="cloud-cog"></i>
+          <h3>Cloud와 AI를 실무 도구로 쓰기</h3>
+          <p>클라우드 운영, 관측성, 자동화 흐름에 익숙하고 AI 도구는 설계 검토, 코드 탐색, 문서화, 반복 작업 단축에 적극적으로 활용합니다.</p>
+        </article>
       </div>
     </section>
 
@@ -127,12 +157,13 @@
         <p>화려한 기술 목록보다, 실제 운영 문제를 어떤 구조로 풀었는지에 초점을 맞췄습니다.</p>
       </div>
       <div class="project-grid">
-        <article class="project-card featured reveal">
+        <article class="project-card highlight reveal">
           <div>
             <span class="project-tag">Product Architecture</span>
             <h3>차세대 병원용 통합 펜차트 시스템</h3>
             <p>PC와 모바일로 나뉘어 있던 차트 경험을 웹 기반 통합 구조로 재설계했습니다. 캔버스 UI, 이미지 포맷, 데이터 처리 위치를 함께 조정해 제품 사용성과 운영 비용을 동시에 봤습니다.</p>
           </div>
+          <div class="project-proof">신규 제품 아키텍처 · 서버 부담 완화</div>
           <ul>
             <li>.NET 10 Minimal API, CQRS, Unit of Work 기반 API 구조 설계</li>
             <li>React, Konva.js, Zustand, TanStack 기반 캔버스 작업 흐름 구현</li>
@@ -143,26 +174,225 @@
           <span class="project-tag">FinOps</span>
           <h3>DB·인프라 비용 최적화</h3>
           <p>r5.4xlarge급 DB에서 SP와 SQL Agent를 튜닝하고, 일부 반복 작업을 애플리케이션으로 분리해 더 작은 인스턴스로 전환했습니다. 전체 CPU 사용률을 50% 이상 낮추고 인프라 비용도 약 40% 절감했습니다.</p>
+          <div class="project-proof">CPU 50%+ 감소 · 비용 약 40% 절감</div>
         </article>
         <article class="project-card reveal">
           <span class="project-tag">Realtime Platform</span>
           <h3>Flask WebSocket 서버 Go 이관</h3>
           <p>실시간 예약·현황판 엔진을 Go와 Redis Pub/Sub 구조로 다시 작성해, 기존 3대 서버 구성을 1대 운영 구조로 줄였습니다. 서버 수 기준 약 66%의 인프라 축소 효과를 만들었습니다.</p>
+          <div class="project-proof">서버 3대 → 1대 운영 구조</div>
         </article>
         <article class="project-card reveal">
           <span class="project-tag">Legacy Modernization</span>
           <h3>VB 6.0 마이크로 3-Tier 전환</h3>
           <p>레거시 클라이언트가 DB에 직접 붙는 구조를 COM 게이트웨이와 NDJSON 스트리밍으로 분리해 보안과 대용량 응답 처리를 개선했습니다.</p>
+          <div class="project-proof">DB 직접 연결 차단 · 스트리밍 전환</div>
         </article>
         <article class="project-card reveal">
           <span class="project-tag">Security Platform</span>
           <h3>의료정보 암호화·전자서명 서버</h3>
           <p>AES256, RSA, X.509 인증서 기반 전자서명 흐름을 만들고 개인정보와 처방 데이터 보호 요구를 서비스 구조 안에 녹였습니다.</p>
+          <div class="project-proof">ISMS 대응 · 전자서명 기반 구축</div>
         </article>
         <article class="project-card reveal">
           <span class="project-tag">Operations</span>
           <h3>OKR 기반 업무보고 시스템</h3>
           <p>Blazor 기반 목표·보고 시스템을 기획하고 개발해 주간·월간 업무 흐름을 가시화했고, 보고 누락률을 80% 낮췄습니다.</p>
+          <div class="project-proof">보고 누락률 80% 감소</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="cases" class="section cases-section">
+      <div class="section-heading wide reveal">
+        <p class="eyebrow">Deep Dives</p>
+        <h2>대표 업무를 실제로 어떻게 풀었는가</h2>
+        <p>결과만 적기보다, 당시의 제약과 설계 판단이 보이도록 정리했습니다.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card reveal">
+          <div class="case-head">
+            <span class="project-tag">FinOps · Database · Runtime Split</span>
+            <h3>DB·인프라 비용 구조 재설계</h3>
+          </div>
+          <div class="case-body">
+            <div>
+              <h4>상황</h4>
+              <p>r5.4xlarge급 DB에 SP, SQL Agent, 반복 배치성 작업이 함께 몰리면서 CPU 사용률과 비용이 동시에 커지고 있었습니다.</p>
+            </div>
+            <div>
+              <h4>접근</h4>
+              <p>SP와 Agent 작업을 먼저 분석해 튜닝했고, DB에서 처리하지 않아도 되는 일부 작업은 애플리케이션 프로세스로 분리했습니다. 데이터베이스는 데이터 정합성과 조회에 집중하도록 역할을 좁혔습니다.</p>
+            </div>
+            <div>
+              <h4>결과</h4>
+              <p>전체 CPU 사용률을 50% 이상 줄이고 더 작은 인스턴스 운영이 가능해졌습니다. DB뿐 아니라 애플리케이션, 배치, 모니터링, 스토리지까지 함께 조정해 인프라 비용을 약 40% 절감했습니다.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card reveal">
+          <div class="case-head">
+            <span class="project-tag">Product · Canvas · Cloud Cost</span>
+            <h3>차세대 병원용 통합 펜차트</h3>
+          </div>
+          <div class="case-body">
+            <div>
+              <h4>상황</h4>
+              <p>PC와 모바일 차트 경험이 나뉘어 있었고, 이미지와 차트 데이터 처리 방식이 서버 비용과 사용자 경험에 직접 영향을 주고 있었습니다.</p>
+            </div>
+            <div>
+              <h4>접근</h4>
+              <p>.NET Minimal API, CQRS, Unit of Work로 API 구조를 잡고 React, Konva.js 기반의 캔버스 작업 흐름을 구성했습니다. TanStack, Zustand로 상태와 렌더링 범위를 조절했습니다.</p>
+            </div>
+            <div>
+              <h4>결과</h4>
+              <p>클라이언트가 처리할 수 있는 영역은 브라우저 쪽으로 옮기고, 이미지에는 WebP 압축을 적용해 서버 컴퓨팅과 아웃바운드 트래픽 부담을 낮췄습니다.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card reveal">
+          <div class="case-head">
+            <span class="project-tag">Legacy · Security · Streaming</span>
+            <h3>VB 6.0 시스템의 마이크로 3-Tier 전환</h3>
+          </div>
+          <div class="case-body">
+            <div>
+              <h4>상황</h4>
+              <p>오래된 VB 6.0 클라이언트가 DB에 직접 연결하는 구조라 보안 리스크와 DB 부하가 함께 존재했습니다. 전체 클라이언트를 한 번에 갈아엎기는 어려웠습니다.</p>
+            </div>
+            <div>
+              <h4>접근</h4>
+              <p>COM DLL 기반 게이트웨이 프록시를 두어 기존 클라이언트 수정 범위를 줄였고, 대용량 Record Set 응답은 NDJSON HTTP 스트리밍과 생산자-소비자 구조로 처리했습니다.</p>
+            </div>
+            <div>
+              <h4>결과</h4>
+              <p>DB 직접 연결을 차단하면서도 기존 업무 흐름은 유지했습니다. 보안 경계를 분리하고 대용량 응답 처리의 안정성을 높였습니다.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="archive" class="section archive-section">
+      <div class="section-heading wide reveal">
+        <p class="eyebrow">Work Archive</p>
+        <h2>상세 업무 아카이브</h2>
+        <p>대표 업무 바깥에 있는 프로젝트까지 빠르게 훑을 수 있도록 영역별로 정리했습니다.</p>
+      </div>
+      <div class="archive-tabs reveal" role="tablist" aria-label="업무 영역 필터">
+        <button type="button" class="is-active" data-filter="all">All</button>
+        <button type="button" data-filter="carelabs">Carelabs</button>
+        <button type="button" data-filter="mediai">GC MediAi</button>
+        <button type="button" data-filter="security">Security</button>
+        <button type="button" data-filter="platform">Platform</button>
+      </div>
+      <div class="archive-grid">
+        <article class="archive-item reveal" data-category="carelabs platform">
+          <span>Carelabs · Automation</span>
+          <h3>사업부 운영 자동화 및 백그라운드 모니터링</h3>
+          <p>.NET Background Host와 Hangfire로 배치·스케줄링 구조를 만들고, 자동화 상태와 헬스체크를 볼 수 있는 현황판을 구성했습니다.</p>
+        </article>
+        <article class="archive-item reveal" data-category="carelabs platform">
+          <span>Carelabs · Realtime</span>
+          <h3>Go 기반 WebSocket 엔진 이관</h3>
+          <p>Flask 기반 구조를 Go, Goroutine, Channel, Redis Pub/Sub 중심으로 전환해 실시간 예약·현황판 데이터를 안정적으로 브로드캐스트했습니다.</p>
+        </article>
+        <article class="archive-item reveal" data-category="carelabs platform">
+          <span>Carelabs · CRM</span>
+          <h3>CRM 시스템 마이크로서비스 전환</h3>
+          <p>SQL Agent 중심의 예약·상담 처리 구조를 .NET Hosted Service와 FastAPI 비동기 처리로 분리하고, Polly와 CloudWatch로 장애 전파를 줄였습니다.</p>
+        </article>
+        <article class="archive-item reveal" data-category="carelabs platform">
+          <span>Carelabs · CTI</span>
+          <h3>CTI 시스템 및 통신사 클라이언트 제어</h3>
+          <p>Windows Named Pipe 기반 IPC와 AWS SQS를 활용해 SK, KT, LG 클라이언트 제어와 상태 추적 파이프라인을 구성했습니다.</p>
+        </article>
+        <article class="archive-item reveal" data-category="carelabs security">
+          <span>Carelabs · Security</span>
+          <h3>의료정보 암호화 및 전자서명 서버</h3>
+          <p>AES256, RSA, X.509 인증서 기반 전자서명 흐름을 만들고, 개인정보와 처방 데이터 보호 요구를 서비스 구조에 반영했습니다.</p>
+        </article>
+        <article class="archive-item reveal" data-category="carelabs platform">
+          <span>Carelabs · Data Sync</span>
+          <h3>EMR 클라우드 운영 및 DB 동기화 자동화</h3>
+          <p>Azure SQL Server 공용 DB와 로컬 클라이언트 DB 간 동기화 흐름을 설계하고, Azure Functions와 스케줄러 기반으로 배치를 자동화했습니다.</p>
+        </article>
+        <article class="archive-item reveal" data-category="carelabs security">
+          <span>Carelabs · Compliance</span>
+          <h3>정부 고시 정책 대응 룰 엔진</h3>
+          <p>보험청구 기준 변경을 분석해 정책 파서와 룰 엔진으로 분리했고, 고시 변경 대응을 빠르게 반영할 수 있는 구조로 정리했습니다.</p>
+        </article>
+        <article class="archive-item reveal" data-category="carelabs platform">
+          <span>Carelabs · Operations</span>
+          <h3>OKR 기반 업무보고 시스템</h3>
+          <p>Blazor 기반 목표·보고 시스템을 만들어 주간, 월간, 분기별 목표와 진행 상황을 시각화하고 전사 보고 누락률을 낮췄습니다.</p>
+        </article>
+        <article class="archive-item reveal" data-category="carelabs security">
+          <span>Carelabs · Governance</span>
+          <h3>ISMS 인증 유지 및 연례 심사 대응</h3>
+          <p>개발·인프라 부문 심사 대응, 취약점 진단 프로세스, 접근제어 권한 체계 정비를 통해 보안 거버넌스를 운영했습니다.</p>
+        </article>
+        <article class="archive-item reveal" data-category="mediai platform">
+          <span>GC MediAi · SaaS</span>
+          <h3>클라우드 기반 EMR-CRM SaaS</h3>
+          <p>React, TypeScript, Node.js, PostgreSQL, Docker 기반으로 의료·고객관리 SaaS 구조를 설계하고 Windows Agent와 WebSocket 연동을 구현했습니다.</p>
+        </article>
+        <article class="archive-item reveal" data-category="mediai platform">
+          <span>GC MediAi · Pharmacy</span>
+          <h3>전국 약국 인프라 시스템 마이그레이션</h3>
+          <p>VB 6.0 레거시를 .NET WinForm 기반으로 재설계하고, SOAP 통신을 REST API와 비동기 멀티스레딩 구조로 전환했습니다.</p>
+        </article>
+        <article class="archive-item reveal" data-category="mediai platform">
+          <span>GC MediAi · EMR</span>
+          <h3>검진센터용 멀티테넌시 EMR</h3>
+          <p>ASP.NET MVC3, Razor, Knockout.js, Entity Framework 기반으로 병원별 DB Context 확장 구조와 Repository/Service Layer를 설계했습니다.</p>
+        </article>
+        <article class="archive-item reveal" data-category="mediai platform">
+          <span>GC MediAi · Global</span>
+          <h3>태국 대형 병원 EMR 구축</h3>
+          <p>3년간 현지 대형 병원 프로젝트에서 WinForm EMR 코어 엔진 리팩토링, TCP Socket 통신, 데이터 레이어 개선을 수행했습니다.</p>
+        </article>
+        <article class="archive-item reveal" data-category="mediai security">
+          <span>GC MediAi · Groupware</span>
+          <h3>사내 그룹웨어 및 인증 연동</h3>
+          <p>ASP.NET MVC 기반 일정, 전자결재, 커뮤니케이션 기능을 개발하고 OAuth와 Active Directory 연동을 적용했습니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="method" class="section method-section">
+      <div class="section-heading wide reveal">
+        <p class="eyebrow">Operating Method</p>
+        <h2>제가 복잡한 시스템을 다루는 방식</h2>
+        <p>기술을 먼저 고르기보다, 비용이 새는 지점과 장애가 번지는 경계를 먼저 찾습니다.</p>
+      </div>
+      <div class="method-grid">
+        <article class="method-step reveal">
+          <span>01</span>
+          <h3>계측 가능한 문제로 바꿉니다</h3>
+          <p>CPU, 요청 수, 응답 지연, 수동 처리 시간, 장애 전파 범위를 먼저 확인해 개선 대상을 숫자로 고정합니다.</p>
+        </article>
+        <article class="method-step reveal">
+          <span>02</span>
+          <h3>경계를 다시 나눕니다</h3>
+          <p>DB가 해야 할 일, 애플리케이션이 가져가야 할 일, 배치로 분리할 일을 나눠 병목이 한 곳에 쌓이지 않게 합니다.</p>
+        </article>
+        <article class="method-step reveal">
+          <span>03</span>
+          <h3>기존 업무를 멈추지 않습니다</h3>
+          <p>레거시를 한 번에 버리기보다 게이트웨이, 프록시, 스트리밍, 동기화 계층으로 안전하게 전환합니다.</p>
+        </article>
+        <article class="method-step reveal">
+          <span>04</span>
+          <h3>운영 자산으로 남깁니다</h3>
+          <p>대시보드, 로그, 코드 리뷰, 문서화, OKR 흐름까지 연결해 개선이 한 번의 프로젝트로 끝나지 않게 합니다.</p>
+        </article>
+        <article class="method-step reveal">
+          <span>05</span>
+          <h3>AI를 검토 파트너로 씁니다</h3>
+          <p>코드베이스 탐색, 변경 영향 분석, 문서 초안, 테스트 관점 정리에 AI를 붙여 반복 시간을 줄이고 판단은 로그와 코드로 검증합니다.</p>
         </article>
       </div>
     </section>
@@ -189,6 +419,14 @@
           <h3>Ops, Observability & Security</h3>
           <p>Docker, CI/CD, Hangfire, OpenTelemetry, Grafana, Prometheus, CloudWatch, ISMS, JWT, X.509</p>
         </article>
+        <article class="reveal">
+          <h3>Cloud & Serverless</h3>
+          <p>AWS S3, SQS, Athena, CloudWatch, Azure SQL Server, Azure Functions, Docker-based deployment flows</p>
+        </article>
+        <article class="reveal">
+          <h3>AI-assisted Engineering</h3>
+          <p>AI 기반 코드 리딩, 리팩토링 초안, 로그 분석 보조, 문서화, 테스트 관점 정리, 반복 작업 자동화</p>
+        </article>
       </div>
     </section>
 
@@ -205,7 +443,7 @@
         </article>
         <article class="reveal">
           <span>이전 · 약 13년</span>
-          <h3>유비케어 · 의료 시스템 개발 및 리딩</h3>
+          <h3>GC MediAi(구 유비케어) · 의료 시스템 개발 및 리딩</h3>
           <p>클라우드 EMR-CRM SaaS, 전국 약국 시스템 마이그레이션, 검진센터 EMR, 태국 대형 병원 프로젝트, 그룹웨어 개발을 경험했습니다.</p>
         </article>
         <article class="reveal">

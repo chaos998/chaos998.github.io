@@ -1,6 +1,26 @@
 const header = document.querySelector("[data-elevate]");
 const counters = document.querySelectorAll("[data-count]");
 const revealItems = document.querySelectorAll(".reveal");
+const themeToggle = document.querySelector("[data-theme-toggle]");
+const archiveButtons = document.querySelectorAll("[data-filter]");
+const archiveItems = document.querySelectorAll("[data-category]");
+
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+const setTheme = (theme) => {
+  document.documentElement.dataset.theme = theme;
+  localStorage.setItem("portfolio-theme", theme);
+
+  const icon = theme === "dark" ? "sun" : "moon";
+  themeToggle?.querySelector("i")?.setAttribute("data-lucide", icon);
+
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
+};
+
+const savedTheme = localStorage.getItem("portfolio-theme");
+setTheme(savedTheme || (prefersDark.matches ? "dark" : "light"));
 
 const updateHeader = () => {
   header?.classList.toggle("is-elevated", window.scrollY > 8);
@@ -54,6 +74,25 @@ revealItems.forEach((item, index) => {
 });
 
 counters.forEach((counter) => observer.observe(counter));
+
+themeToggle?.addEventListener("click", () => {
+  const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  setTheme(nextTheme);
+});
+
+archiveButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+
+    archiveButtons.forEach((item) => item.classList.toggle("is-active", item === button));
+
+    archiveItems.forEach((item) => {
+      const categories = item.dataset.category?.split(" ") || [];
+      const shouldShow = filter === "all" || categories.includes(filter);
+      item.classList.toggle("is-hidden", !shouldShow);
+    });
+  });
+});
 
 window.addEventListener("DOMContentLoaded", () => {
   if (window.lucide) {
