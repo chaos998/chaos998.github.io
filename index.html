@@ -1,91 +1,231 @@
-<!DOCTYPE html>
-<html lang="en" data-theme=""><head>
-    <title>  | Hello Programmer </title>
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.75.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="Happy Gopher">
-    
-    <link rel="stylesheet" href="https://chaos998.github.io/css/style.min.5be3a155aa89a24586c761b1b5538c4040e3735ee32ac12a708dc1696c0982f5.css" integrity="sha256-W&#43;OhVaqJokWGx2GxtVOMQEDjc17jKsEqcI3BaWwJgvU=" crossorigin="anonymous" type="text/css"><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
-    <link rel="shortcut icon" href="https://chaos998.github.io/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://chaos998.github.io/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://chaos998.github.io/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://chaos998.github.io/favicons/favicon-16x16.png">
-    <link rel="canonical" href="https://chaos998.github.io/">
-    <link rel="alternate" type="application/rss+xml" href="https://chaos998.github.io/index.xml" title="Hello Programmer" />
-    
-    
-    <script type="text/javascript" src="https://chaos998.github.io/js/anatole-header.min.7e2fc0724240b28c6e214687e73a4a6eb6c196bbace546b9dc86e94cca120b5c.js" integrity="sha256-fi/AckJAsoxuIUaH5zpKbrbBlrus5Ua53IbpTMoSC1w=" crossorigin="anonymous"></script>
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hello Programmer"/>
-<meta name="twitter:description" content="Happy Gopher"/>
-
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="이수민 - 의료 도메인과 운영 시스템을 설계하고 개선해 온 Hands-on Architect">
+  <meta property="og:title" content="이수민 | Hands-on Architect">
+  <meta property="og:description" content="의료 도메인, 레거시 현대화, 클라우드 비용 최적화, 보안 컴플라이언스를 제품과 운영 관점에서 풀어온 개발 리더">
+  <meta property="og:type" content="website">
+  <title>이수민 | Hands-on Architect</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script src="./script.js" defer></script>
 </head>
-<body><div class="sidebar animated fadeInDown">
-    <div class="logo-title">
-        <div class="title">
-            <img src="https://chaos998.github.io/images/profile.jpg" alt="profile picture">
-            <h3 title=""><a href="/">I&#39;m Gopher</a></h3>
-            <div class="description">
-                <p>Happy Gopher</p>
-            </div>
+<body>
+  <header class="site-header" data-elevate>
+    <a class="brand" href="#top" aria-label="이수민 포트폴리오 홈">
+      <span class="brand-mark">SM</span>
+      <span>이수민</span>
+    </a>
+    <nav class="site-nav" aria-label="주요 섹션">
+      <a href="#impact">Impact</a>
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#timeline">Career</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-visual-field" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Healthcare Systems · Legacy Modernization · FinOps</p>
+        <h1>오래 버틴 시스템을, 다시 오래 갈 수 있게 만드는 개발 리더</h1>
+        <p class="hero-lede">
+          의료 도메인에서 17년 동안 제품, 레거시, 인프라, 보안 심사를 함께 다뤄왔습니다.
+          핵심 구조를 설계하고, 필요한 코드는 직접 쓰고, 운영에서 버티는 형태로 마무리하는 쪽에 강합니다.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#work">
+            <i data-lucide="layers-3"></i>
+            대표 성과 보기
+          </a>
+          <a class="ghost-action" href="#contact">
+            <i data-lucide="send"></i>
+            연락하기
+          </a>
         </div>
-    </div>
-    <ul class="social-links">
-        
-    </ul>
-    <div class="footer">
-        <div class="by_farbox">&copy;  2020 </div>
-    </div>
-</div>
-<div class="main">
-            <div class="page-top animated fadeInDown">
-    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+      </div>
+      <figure class="hero-portrait reveal">
+        <img src="./resume-pic.png" alt="이수민 프로필 사진">
+        <figcaption>
+          <span>Hands-on Architect</span>
+          <strong>17 years around real production systems</strong>
+        </figcaption>
+      </figure>
+      <div class="hero-metrics" aria-label="핵심 지표">
+        <article class="reveal">
+          <strong data-count="17" data-suffix="+">17+</strong>
+          <span>Years in product and operation systems</span>
+        </article>
+        <article class="reveal">
+          <strong data-count="50" data-suffix="%+">50%+</strong>
+          <span>Database CPU usage reduced</span>
+        </article>
+        <article class="reveal">
+          <strong data-count="40" data-suffix="%">40%</strong>
+          <span>Infrastructure cost reduced</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="intro-band">
+      <div class="quote-block reveal">
+        <p>“좋은 아키텍처는 발표 자료보다 운영 중인 코드와 비용 청구서에서 먼저 증명된다고 믿습니다.”</p>
+      </div>
+      <div class="intro-copy reveal">
+        <p>
+          저는 의료 현장의 업무 흐름과 오래된 시스템의 제약을 이해하는 개발자입니다.
+          새로 만드는 일도 좋아하지만, 이미 많은 사람이 의존하고 있는 시스템을 멈추지 않고 바꾸는 일을 더 오래 해왔습니다.
+          비용, 성능, 보안, 유지보수성을 따로 보지 않고 하나의 운영 구조로 묶어 판단합니다.
+        </p>
+      </div>
+    </section>
+
+    <section id="impact" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Executive Snapshot</p>
+        <h2>제가 반복해서 해결해 온 문제들</h2>
+      </div>
+      <div class="impact-grid">
+        <article class="impact-card accent-cyan reveal">
+          <i data-lucide="banknote"></i>
+          <h3>운영 비용이 커지는 지점 찾기</h3>
+          <p>DB 인스턴스, SQL Agent, SP, 로그 저장소, 모니터링 도구, S3 요청처럼 비용이 누적되는 구간을 코드와 인프라 양쪽에서 정리했습니다.</p>
+        </article>
+        <article class="impact-card accent-amber reveal">
+          <i data-lucide="refresh-cw"></i>
+          <h3>레거시를 멈추지 않고 바꾸기</h3>
+          <p>VB 6.0, DB 직접 연결, 오래된 통신 구조를 기존 사용 흐름을 깨지 않는 방식으로 단계적으로 분리했습니다.</p>
+        </article>
+        <article class="impact-card accent-rose reveal">
+          <i data-lucide="shield-check"></i>
+          <h3>의료 보안과 심사 대응</h3>
+          <p>ISMS 심사, 암호화, 전자서명, 접근제어를 개발팀의 실제 업무 흐름 안에서 지킬 수 있는 형태로 정리했습니다.</p>
+        </article>
+        <article class="impact-card accent-green reveal">
+          <i data-lucide="users-round"></i>
+          <h3>실행이 남는 리더십</h3>
+          <p>개발 리딩, 코드 리뷰, Scrum 운영, OKR 시스템 구축을 통해 일이 보이고 이어지는 개발 문화를 만드는 데 집중했습니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="work" class="section work-section">
+      <div class="section-heading wide reveal">
+        <p class="eyebrow">Selected Work</p>
+        <h2>대표 프로젝트</h2>
+        <p>화려한 기술 목록보다, 실제 운영 문제를 어떤 구조로 풀었는지에 초점을 맞췄습니다.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card featured reveal">
+          <div>
+            <span class="project-tag">Product Architecture</span>
+            <h3>차세대 병원용 통합 펜차트 시스템</h3>
+            <p>PC와 모바일로 나뉘어 있던 차트 경험을 웹 기반 통합 구조로 재설계했습니다. 캔버스 UI, 이미지 포맷, 데이터 처리 위치를 함께 조정해 제품 사용성과 운영 비용을 동시에 봤습니다.</p>
+          </div>
+          <ul>
+            <li>.NET 10 Minimal API, CQRS, Unit of Work 기반 API 구조 설계</li>
+            <li>React, Konva.js, Zustand, TanStack 기반 캔버스 작업 흐름 구현</li>
+            <li>WebP 압축과 클라이언트 처리 비중 확대로 서버 부담 완화</li>
+          </ul>
+        </article>
+        <article class="project-card reveal">
+          <span class="project-tag">FinOps</span>
+          <h3>DB·인프라 비용 최적화</h3>
+          <p>r5.4xlarge급 DB에서 SP와 SQL Agent를 튜닝하고, 일부 반복 작업을 애플리케이션으로 분리해 더 작은 인스턴스로 전환했습니다. 전체 CPU 사용률을 50% 이상 낮추고 인프라 비용도 약 40% 절감했습니다.</p>
+        </article>
+        <article class="project-card reveal">
+          <span class="project-tag">Realtime Platform</span>
+          <h3>Flask WebSocket 서버 Go 이관</h3>
+          <p>실시간 예약·현황판 엔진을 Go와 Redis Pub/Sub 구조로 다시 작성해, 기존 3대 서버 구성을 1대 운영 구조로 줄였습니다. 서버 수 기준 약 66%의 인프라 축소 효과를 만들었습니다.</p>
+        </article>
+        <article class="project-card reveal">
+          <span class="project-tag">Legacy Modernization</span>
+          <h3>VB 6.0 마이크로 3-Tier 전환</h3>
+          <p>레거시 클라이언트가 DB에 직접 붙는 구조를 COM 게이트웨이와 NDJSON 스트리밍으로 분리해 보안과 대용량 응답 처리를 개선했습니다.</p>
+        </article>
+        <article class="project-card reveal">
+          <span class="project-tag">Security Platform</span>
+          <h3>의료정보 암호화·전자서명 서버</h3>
+          <p>AES256, RSA, X.509 인증서 기반 전자서명 흐름을 만들고 개인정보와 처방 데이터 보호 요구를 서비스 구조 안에 녹였습니다.</p>
+        </article>
+        <article class="project-card reveal">
+          <span class="project-tag">Operations</span>
+          <h3>OKR 기반 업무보고 시스템</h3>
+          <p>Blazor 기반 목표·보고 시스템을 기획하고 개발해 주간·월간 업무 흐름을 가시화했고, 보고 누락률을 80% 낮췄습니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="stack" class="section stack-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Technical Range</p>
+        <h2>문제에 맞춰 꺼내 쓰는 기술들</h2>
+      </div>
+      <div class="stack-list">
+        <article class="reveal">
+          <h3>Backend & Runtime</h3>
+          <p>.NET 10/9/Core, Go, FastAPI, Flask, Node.js, VB 6.0 modernization</p>
+        </article>
+        <article class="reveal">
+          <h3>Frontend & Product UI</h3>
+          <p>React, Blazor, Razor, TypeScript, Tailwind CSS, Zustand, TanStack, Konva.js</p>
+        </article>
+        <article class="reveal">
+          <h3>Data & Messaging</h3>
+          <p>PostgreSQL, Redis, Azure SQL Server, AWS RDS, WebSocket, TCP Socket, NDJSON, SQS</p>
+        </article>
+        <article class="reveal">
+          <h3>Ops, Observability & Security</h3>
+          <p>Docker, CI/CD, Hangfire, OpenTelemetry, Grafana, Prometheus, CloudWatch, ISMS, JWT, X.509</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="timeline" class="section timeline-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Career</p>
+        <h2>커리어 타임라인</h2>
+      </div>
+      <div class="timeline">
+        <article class="reveal">
+          <span>현재 · 4년 6개월+</span>
+          <h3>케어랩스 · 개발 리딩 / Hands-on Architect</h3>
+          <p>병원용 통합 펜차트, 레거시 현대화, 실시간 인프라, FinOps, ISMS 심사 대응, 내부 생산성 시스템을 맡아 설계와 구현을 함께 진행했습니다.</p>
+        </article>
+        <article class="reveal">
+          <span>이전 · 약 13년</span>
+          <h3>유비케어 · 의료 시스템 개발 및 리딩</h3>
+          <p>클라우드 EMR-CRM SaaS, 전국 약국 시스템 마이그레이션, 검진센터 EMR, 태국 대형 병원 프로젝트, 그룹웨어 개발을 경험했습니다.</p>
+        </article>
+        <article class="reveal">
+          <span>2009 - 현재</span>
+          <h3>의료 도메인 중심의 프로덕션 시스템 17년</h3>
+          <p>웹, 데스크톱, 클라우드, 보안, 운영 자동화까지 한 제품이 실제 현장에서 돌아가기 위해 필요한 여러 층을 다뤄왔습니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div>
+        <p class="eyebrow">Let's Build</p>
+        <h2>복잡한 시스템을 정리하고, 오래 갈 구조로 바꾸는 일이 필요할 때</h2>
+      </div>
+      <a class="primary-action inverse" href="mailto:chaos998@gmail.com">
+        <i data-lucide="mail"></i>
+        이메일 연결
       </a>
-    <ul class="nav" id="navMenu">
-        
-        
-        
-        <li><a class="current" href="/"  title="">Home</a></li>
-        
-        
-        <li><a  href="/programming/"  title="">Programming</a></li>
-        
-        
-        <li><a  href="/about/"  title="">About</a></li>
-        
-        
-        <li class="theme-switch-item">
-        <a class="theme-switch" title="Switch Theme">
-            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
-        </a>
-        </li>
-    </ul>
-</div>
-
-            <div class="autopagerize_page_element">
-                <div class="content">
-  
-  
-<div class="pagination">
-  
-
-
-</div>
-
-                </div>
-            </div>
-        </div>
-
-<script type="text/javascript" src="https://chaos998.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
-
-
-
-
-<script type="text/javascript" src="https://chaos998.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
-
-<script type="text/javascript" src="https://chaos998.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></body>
-
+    </section>
+  </main>
+</body>
 </html>
