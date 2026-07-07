@@ -11,6 +11,9 @@
   --header-bg: rgba(251, 252, 248, 0.86);
   --grid-line: rgba(20, 33, 61, 0.08);
   --on-dark-panel: #f8fafc;
+  --inverse-bg: #17212b;
+  --inverse-text: #f8fafc;
+  --inverse-muted: rgba(248, 250, 252, 0.78);
   --navy: #14213d;
   --violet: #5b4bdb;
   --teal: #0f766e;
@@ -34,6 +37,9 @@
   --header-bg: rgba(13, 18, 24, 0.82);
   --grid-line: rgba(232, 237, 243, 0.07);
   --on-dark-panel: #f8fafc;
+  --inverse-bg: #0f1720;
+  --inverse-text: #f8fafc;
+  --inverse-muted: rgba(226, 232, 240, 0.78);
   --navy: #111923;
   --teal: #5eead4;
   --cyan: #67e8f9;
@@ -437,8 +443,8 @@ h1 {
   grid-template-columns: 0.78fr 1fr;
   gap: clamp(26px, 6vw, 80px);
   padding: 72px 5vw;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--inverse-bg);
+  color: var(--inverse-text);
 }
 
 .quote-block p {
@@ -450,7 +456,7 @@ h1 {
 
 .intro-copy p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--inverse-muted);
   font-size: 18px;
   line-height: 1.9;
 }
@@ -834,12 +840,32 @@ h1 {
 
 .method-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 1px;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--line);
+}
+
+.principle-panel {
+  max-width: 1120px;
+  margin: -10px 0 22px;
+  padding: 26px;
+  border: 1px solid color-mix(in srgb, var(--teal) 28%, var(--line));
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--teal) 10%, transparent), transparent 58%),
+    var(--surface-soft);
+}
+
+.principle-panel p {
+  max-width: 980px;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(19px, 2.1vw, 27px);
+  font-weight: 800;
+  line-height: 1.55;
 }
 
 .method-step {

@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
   <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="./styles.css">
+  <script data-goatcounter="https://chaos.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <script src="./script.js" defer></script>
 </head>
@@ -305,6 +307,11 @@
           <p>SQL Agent 중심의 예약·상담 처리 구조를 .NET Hosted Service와 FastAPI 비동기 처리로 분리하고, Polly와 CloudWatch로 장애 전파를 줄였습니다.</p>
         </article>
         <article class="archive-item reveal" data-category="carelabs platform">
+          <span>Carelabs · Aurora CRM</span>
+          <h3>Aurora CRM / CRM Modernization</h3>
+          <p>레거시 CRM 업무 흐름을 현대적인 내부 운영 시스템으로 재구성하며, .NET Minimal API, Dapper, Unit of Work, React, TanStack Query, Zustand 기반의 구조를 설계했습니다.</p>
+        </article>
+        <article class="archive-item reveal" data-category="carelabs platform">
           <span>Carelabs · CTI</span>
           <h3>CTI 시스템 및 통신사 클라이언트 제어</h3>
           <p>Windows Named Pipe 기반 IPC와 AWS SQS를 활용해 SK, KT, LG 클라이언트 제어와 상태 추적 파이프라인을 구성했습니다.</p>
@@ -368,6 +375,12 @@
         <h2>제가 복잡한 시스템을 다루는 방식</h2>
         <p>기술을 먼저 고르기보다, 비용이 새는 지점과 장애가 번지는 경계를 먼저 찾습니다.</p>
       </div>
+      <div class="principle-panel reveal">
+        <p>
+          운영에서 버티는 코드, 추적 가능한 장애, 작게 나눈 책임, 검증 가능한 변경을 중요하게 생각합니다.
+          새 시스템을 만들 때도 로그, 권한, 배포, 유지보수 흐름을 처음부터 함께 설계합니다.
+        </p>
+      </div>
       <div class="method-grid">
         <article class="method-step reveal">
           <span>01</span>
@@ -393,6 +406,11 @@
           <span>05</span>
           <h3>AI를 검토 파트너로 씁니다</h3>
           <p>코드베이스 탐색, 변경 영향 분석, 문서 초안, 테스트 관점 정리에 AI를 붙여 반복 시간을 줄이고 판단은 로그와 코드로 검증합니다.</p>
+        </article>
+        <article class="method-step reveal">
+          <span>06</span>
+          <h3>작게 나누고 계속 검증합니다</h3>
+          <p>큰 전환도 기능·책임 단위로 쪼개고, 각 단계마다 빌드와 테스트로 확인해 운영 가능한 상태를 유지합니다.</p>
         </article>
       </div>
     </section>
